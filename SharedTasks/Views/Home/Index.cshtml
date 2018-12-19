@@ -1,0 +1,24 @@
+﻿@model SharedTasks.Models.IndexViewModel
+
+<div class="row">
+    <div class="col-md-8" style="margin-top:40px;">
+        <input type="text" class="form-control" placeholder="Task" id="title" />
+    </div>
+    <div class="col-md-4" style="margin-top:40px;">
+        <button class="btn btn-danger btn-block" id="submit">Add Task</button>
+    </div>
+</div>
+<br />
+<table class="table table-bordered" data-user-id="@Model.UserId">
+    <tr>
+        <th>Task</th>
+        <th>Status</th>
+    </tr>
+</table>
+
+@section scripts
+{
+    <script src="/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="/Scripts/index.js"></script>
+}
